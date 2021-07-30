@@ -14,7 +14,7 @@ namespace Insurance_Management_System.Connection
 {
     class SQLServerConnection
     {
-        public static string stringConnection = "Data Source=DESKTOP-O3H1CKS\\SQLCS412_SOFIA;Initial Catalog = InsuranceDatabase;Integrated Security=True";
+        public static string stringConnection = "";
 
         public static DataTable executeSQL(string sql)
         {
