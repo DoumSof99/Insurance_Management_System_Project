@@ -1,0 +1,36 @@
+USE [InsuranceDatabase]
+GO
+
+/****** Object:  Table [dbo].[AddClient]    Script Date: 12/8/2020 1:00:53 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[AddClient](
+	[Auto_ID] [int] IDENTITY(1,1) NOT NULL,
+	[FullName] [nvarchar](50) NULL,
+	[FatherName] [nvarchar](50) NULL,
+	[Age] [int] NULL,
+	[MobileNum] [bigint] NULL,
+	[Email] [nvarchar](20) NULL,
+	[Address] [nchar](10) NULL,
+	[PersonalID] [bigint] NULL,
+	[MeetingName] [nvarchar](50) NULL,
+	[Booked] [nvarchar](5) NULL,
+ CONSTRAINT [PK_AddClient] PRIMARY KEY CLUSTERED 
+(
+	[Auto_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[AddClient]  WITH CHECK ADD  CONSTRAINT [FK_Meeting_MeetingName] FOREIGN KEY([Auto_ID])
+REFERENCES [dbo].[AddClient] ([Auto_ID])
+GO
+
+ALTER TABLE [dbo].[AddClient] CHECK CONSTRAINT [FK_Meeting_MeetingName]
+GO
+
+

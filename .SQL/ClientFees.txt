@@ -1,0 +1,23 @@
+USE [InsuranceDatabase]
+GO
+
+/****** Object:  Table [dbo].[ClientFees]    Script Date: 12/10/2020 12:03:31 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ClientFees](
+	[Auto_ID] [int] IDENTITY(1,1) NOT NULL,
+	[MobileNum] [bigint] NULL,
+	[Date] [nvarchar](30) NULL,
+	[Amount] [bigint] NULL,
+ CONSTRAINT [PK_ClientFees] PRIMARY KEY CLUSTERED 
+(
+	[Auto_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
